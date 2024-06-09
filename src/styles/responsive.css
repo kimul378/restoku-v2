@@ -1,0 +1,128 @@
+@media screen and (min-width: 650px) {
+    .app-bar {
+      grid-template-columns: 1fr auto;
+      padding: 8px 32px;
+    }
+   
+    .app-bar .app-bar__brand h1 {
+      font-size: 1.5em;
+    }
+
+   
+    .app-bar .app-bar__menu {
+      display: none;
+    }
+   
+    .app-bar .app-bar__navigation {
+      position: static;
+      width: 100%;
+    }
+   
+    .app-bar .app-bar__navigation ul li {
+      display: inline-block;
+    }
+   
+    .app-bar .app-bar__navigation ul li a {
+      display: inline-block;
+      width: 120px;
+      text-align: center;
+      margin: 0;
+    }
+   
+    .movies {
+      grid-template-columns: 1fr 1fr;
+    }
+   
+    .movie {
+      grid-template-columns: auto 1fr;
+    }
+   
+    .movie .movie__title {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+   
+    .movie .movie__overview {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
+   
+  @media screen and (min-width: 800px) {
+    .app-bar .app-bar__brand h1 {
+      font-size: 2em;
+    }
+  }
+   
+  @media screen and (min-width: 850px) {
+    .movies {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+   
+  @media screen and (min-width: 1200px) {
+    .movies {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+   
+  @media screen and (min-width: 1600px) {
+    .movies {
+        grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+ /* Media Query for Desktop */
+@media (min-width: 768px) {
+  .movie__header {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .movie__header, .movie__poster {
+    order: 0;
+    flex-direction: row;
+  }
+  
+  .movie__poster {
+    margin: 16px 0 0 0;
+    width: 100%;
+    max-width: 800px; /* Batas lebar yang lebih kecil untuk desktop */
+  }
+
+  .movie {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+
+@media (min-width: 1200px) {
+  .hero img {
+    width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+/* Responsive font sizes for hero text */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 32px; 
+  }
+
+  .hero-text p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 24px; 
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+}
+

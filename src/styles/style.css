@@ -1,0 +1,414 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+   
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+   
+   
+  /*
+    AppBar
+  */
+   
+  .app-bar {
+    padding: 8px 16px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+   
+  .app-bar .app-bar__menu {
+    display: flex;
+    align-items: center;
+  }
+   
+  .app-bar .app-bar__menu button {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    padding: 8px;
+    cursor: pointer;
+    min-width: 44px;
+    min-height: 44px;
+  }
+   
+  .app-bar .app-bar__brand {
+    display: flex;
+    align-items: center;
+  }
+   
+  .app-bar .app-bar__brand h1 {
+    color: #f39c12;
+    text-transform: uppercase;
+    font-size: 22px;
+    user-select: none;
+  }
+   
+  .app-bar .app-bar__navigation {
+    position: absolute;
+    top: 55px;
+    left: -180px;
+    width: 150px;
+    transition: all 0.3s;
+    padding: 8px;
+    background-color: white;
+    overflow: hidden;
+
+  }
+   
+  .app-bar .app-bar__navigation.open {
+    left: 0;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+   
+  .app-bar .app-bar__navigation ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding: 1px 5px 0px 0px;
+    margin-bottom: 5px;
+    width: 100%;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    Justify-items: center;
+  }
+   
+  /*
+    Main Content
+  */
+   
+  main {
+    padding: 15px;
+    margin-top: 0;
+    flex: 1;
+  }
+   
+  .content {
+    margin: 0 auto;
+    min-height: 100%;
+  }
+   
+  .content .content__heading {
+    font-weight: normal;
+  }
+   
+   
+  /*
+    Movies
+  */
+   
+  .movies {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 15px 0;
+  }
+   
+   
+  /*
+    Movie Item
+  */
+   
+  .movie-item {
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+   
+  .movie-item__header {
+    position: relative;
+  }
+   
+  .movie-item .movie-item__header .movie-item__header__poster {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+}
+   
+  .movie-item .movie-item__header .movie-item__header__rating {
+    position: absolute;
+    padding: 8px;
+    bottom: 10px;
+    right: 0;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    border-radius: 20px 0px 0 20px;
+  }
+   
+  .movie-item .movie-item__header .movie-item__header__city{
+    position: absolute;
+    padding: 8px;
+    bottom: 50px; 
+    left: 0;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    border-radius: 20px 0px 0 20px;
+
+  }
+
+  .movie-item .movie-item__header .movie-item__header__rating .movie-item__header__rating__score {
+    margin-right: 10px;
+  }
+   
+  .movie-item .movie-item__content {
+    padding: 16px;
+  }
+   
+  .movie-item .movie-item__content h3 {
+    margin: 0 0 10px 0;
+    margin-bottom: 1px;
+  }
+   
+  .movie-item .movie-item__content h3 a {
+    color: #f39c12;
+    text-decoration: none;
+    display: inline-block; 
+    padding: 0px 5px 0px 0px; 
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 20px;
+  }
+   
+  .movie-item .movie-item__content p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    text-align: justify;
+  }
+
+.movie__overview{
+    text-align: justify;
+  }
+   
+   
+  /*
+    Movie
+  */
+   
+  .movie {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px 16px;
+  }
+   
+  .movie .movie__poster {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    margin: 16px 0;
+  }
+   
+  .movie .movie__info h4 {
+    margin: 8px 0;
+  }
+   
+   
+   
+  /*
+    Footer
+  */
+   
+  footer {
+    background-color: #242526;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  width: 100%;
+  font-size: 20px;
+  margin-top: 20px;
+  }
+   
+  footer p {
+  text-align: center;
+  color: #aaaaaa;
+  }
+   
+  footer p a {
+  color: #f39c12;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1px 5px 0px 0px; 
+  min-width: 44px;
+  min-height: 44px;
+  }
+  
+
+  .like {
+    width: 55px;
+    height: 55px;
+    align-items: center;
+    justify-content: center;
+    background-color: #f39c12;
+    top: 30px;
+    right: 16px;
+    border-radius: 50%;
+    border: 0;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    z-index: 9999;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .movie__header {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .movie__title {
+    margin: 0;
+    font-size: 24px;
+  }
+
+  #likeButtonContainer {
+    margin-left: auto;
+  }
+
+  .restaurant-detail{
+    padding: 5px;
+    margin-top: 0;
+  }
+  
+  
+  /* css detail restoran */
+  /* Reset some default styles */
+  .restaurant-detail img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  .restaurant-detail h1 {
+    font-size: 2rem;
+    color: #ff6f61;
+  }
+  
+  .restaurant-detail p {
+    margin-bottom: 1rem;
+  }
+  
+  .restaurant-detail h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #ff6f61;
+    padding-bottom: 0.5rem;
+  }
+  
+  .restaurant-detail ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .restaurant-detail ul li {
+    background-color: #f4f4f4;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+  }
+
+  #splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f39c12; /* Warna latar belakang splash screen */
+    /* Tambahkan animasi atau transisi di sini */
+}
+
+#splash-logo {
+    width: 200px; /* Atur lebar logo */
+    height: auto; /* Biarkan tinggi logo disesuaikan dengan proporsi */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Pusatkan logo di tengah */
+}
+
+
+/* hero */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; 
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding: 20px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+}
+
+.hero-text p {
+  font-size: 24px;
+}
+
+.Content{
+  margin-top: 0;
+  flex: 1;
+}
+
+
+.skip-to-content {
+  position: absolute;
+  left: -999px;
+  top: -999px;
+  background-color: #bf1722;
+  color: #f2f2f2; 
+  padding: 8px;
+  border-radius: 8px;
+  z-index: 10000;
+}
+
+.skip-to-content:focus {
+  left: 10px;
+  top: 80px;  
+  border-color: #f2f2f2;
+}
+
