@@ -56,7 +56,7 @@ const createRestaurantsItemTemplate = (restaurant) => `
       </div>
     </div>
     <div class="movie-item__content">
-      <h3><a href="/#/detail/${restaurant.id}">${restaurant.name}</a></h3>
+      <h3 class="movie__title"> <a href="/#/detail/${restaurant.id}">${restaurant.name}</a></h3>
       <h4>${restaurant.city}</h4>
       <p>${restaurant.description}</p>
     </div>
